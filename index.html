@@ -12,9 +12,9 @@
     </head>
     <body class="w-full h-full scroll-smooth">
      <main class="w-full h-full">
-      <header class="z-30 px-2 flex flex-row justify-between items-center absolute top-7 left-0 right-0 ">
-         <span class="text-2xl tracking-widest">LO</span>
-          <nav>
+      <header class="z-30 px-2 flex flex-row justify-between items-center absolute top-7 left-0 right-0 max">
+         <span class="text-2xl tracking-widest max-xl:text-center max-xl:absolute max-xl:left-1/2">LO</span>
+          <nav class="max-xl:hidden">
             <ul class="flex flex-row justify-between items-center">
                 <li class="mx-2 hover:text-zinc-800 p-1 ease-in-out rounded-xl">
                     <a href="#about">
@@ -39,14 +39,14 @@
        </header>
       <section id="home" class="relative w-full h-full">
          <img class="-z-5 w-full h-full absolute top-0 bottom-full object-cover opacity-80" src="assets/images/homeImg.jpg" alt="This is home page related to health, It's just a banner nothing else"/>
-         <div class="z-5 flex flex-col justify-between items-center max-w-full max-h-full absolute top-3/9 left-3/9">
-            <h1 class="text-[8em] container text-lime-950 tracking-[.1em]">LomBook</h1>
+         <div class="z-5 flex flex-col justify-between items-center max-w-full max-h-full absolute top-3/9 left-3/9 max-xl:items-start max-xl:left-3/10">
+            <h1 class="text-[6em] container text-lime-950 tracking-[.1em] max-md:text-[3em] max-xl:text-left">LomBook</h1>
             <p class="uppercase tracking-[.2em] relative inline-block after:content[''] after:absolute after:top-10 after:bottom-20 after:left-1/4 after:w-15 after:h-[.4em] after:bg-lime-900">Holistic Health</p>
          </div>
       </section>
-      <section id="articles" class="relative flex flex-col justify-evenly items-center  w-full h-full py-10">
-        <h1 class="absolute top-[10em] uppercase tracking-widest text-lime-900 font-mono text-xl after:content[''] after:absolute after:top-10 after:left-1/3 after:bottom-0 after:w-20 after:h-[.2em] after:bg-lime-900">Latest articles</h1>
-        <articles class="flex flex-row justify-evenly items-center">
+      <section id="articles" class="relative flex flex-col justify-evenly items-center  w-full h-full py-10 max-xl:wrap max-xl:min-h-450">
+        <h1 class="absolute top-[10em] uppercase tracking-widest text-lime-900 font-mono text-xl after:content[''] after:absolute after:top-10 after:left-1/3 after:bottom-0 after:w-20 after:h-[.2em] after:bg-lime-900 max-xl:top-10">Latest articles</h1>
+        <articles class="flex flex-row justify-evenly items-center max-xl:flex-col max-xl:items-center max-xl:justify-center">
               <div class="w-80 h-120 shadow-2xl mt-20 mx-3 flex flex-col justify-around items-center  hover:scale-101 hover:-mt-5 ease-in-out duration-300">
                  <img class="w-80 h-60 object-cover" src="assets/images/article1.jpg" alt="image that is related to the particular articles" />
                  <p class="text-center font-serif text-zinc-800 px-3 tracking-wider relative before:content[''] before:absolute before:-top-2 before:left-2/5 before:opacity-40 :bottom-20 before:h-1 before:w-10 before:bg-lime-900">Health is the highest price of god that give to the humans </p>
@@ -61,11 +61,11 @@
              </div>
         </articles>
     </section>
-    <section id="about" class="flex flex-row items-center justify-around w-full h-full">
-         <img class="h-full w-1/2 " src="assets/images/house.jpg" alt="this image related to the website health base contents" />
-         <articles class="w-1/2 flex flex-col items-center justify-between p-20">
+    <section id="about" class="flex flex-row items-center justify-around w-full h-full max-xl:flex-col max-xl:w-full max-xl:justify-evenly max-xl:h-260 max-sm:h-300">
+         <img class="h-full w-1/2 max-xl:w-full max-xl:h-1/3 max-xl:contain" src="assets/images/house.jpg" alt="this image related to the website health base contents" />
+         <articles class="w-1/2 flex flex-col items-center justify-between p-20 max-xl:p-5 max-xl:w-full max-xl:-mt-10">
             <h1 class="tracking-widest font-serif text-zinc-800 text-[3em] uppercase relative after:absolute after:content-[''] after:h-1 after:w-20 after:left-1/3 after:top-18 after:bottom-3 after:bg-zinc-800">About</h1>
-            <p class="mt-10 px-4 text-start tracking-wider text-zinc-900">
+            <p class="mt-10 px-4 text-start tracking-wider text-zinc-900 max-xl:p-0 max-xl:w-full">
               This image showcases a vibrant collection of health-boosting essentials that reflect the simplicity and power of natural nutrition. 
               A clear bottle of water stands as a reminder of the importance of hydration in flushing out toxins, boosting energy, 
               and supporting digestion. Beside it, a bowl of green spirulina powder brings a punch of antioxidants, protein, 
@@ -83,7 +83,7 @@
         <button class="font-serif ring-2 text-2xl tracking-widest text-zinc-700 mt-5 px-3  relative after:absolute after:top-0 after:left-0 after:bottom-3 after:right-2 after:h-8 hover:after:p-2 after:w-0 after:bg-green-200 hover:text-gray hover:after:-z-2 z-5
           hover:after:w-27 after:ease-in-out after:duration-300 ring-2 ring-bg-green-200">Submit</button>
     </section>
-    <footer class="flex flex-row justify-between items-center p-5 w-full h-50">
+    <footer class="flex flex-row justify-between items-center p-5 w-full h-50 max-xl:flex-col max-xl:justify-center max-xl:items-center max-sm:h-80">
         <ul class="flex flex-row justify-between items-center">
             <!-- ICONS LINKS -->
             <li class="ml-1 relative w-8 h-8 rounded-full">
@@ -116,7 +116,7 @@
             </li>
         </ul>
          <nav>
-          <ul class="flex flex-row justify-between items-center">
+          <ul class="flex flex-row justify-between items-center max-sm:flex-col max-sm:justify-between max-sm:items-center max-sm:h-50 max-xl:mt-10">
            <li class="ml-10">
              <a class="uppercase tracking-widest font-serif relative after:absolute after:-top-1 after:-left-2 after:bottom-5 after:right-2 after:h-7 hover:after:p-2 after:w-0 after:bg-green-100 after:-z-5
               hover:after:w-17 after:ease-in-out after:duration-300" href="#">Home
