@@ -9,7 +9,9 @@ Lightweight - No bloated frameworks, just pure HTML and CSS
 Easy to Use - Simple structure, easy to understand and modify
 Cross-Browser Compatible - Works on all modern browsers
 ![Alt text](assets/README_IMG/home.png)
-
+![Alt text](assets/README_IMG/articles.png)
+![Alt text](assets/README_IMG/about.png)
+![Alt text](assets/README_IMG/footer.png)
 🚀 Quick Start
 
 Clone the repository
@@ -78,5 +80,6 @@ If you found this template helpful, please consider:
 
 📧 Contact
 Created by @vikashraosahab
+E-mail : vikashvinayrao@gmail.com
 
 Happy coding! 🚀
