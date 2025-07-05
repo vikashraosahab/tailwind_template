@@ -9,31 +9,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
          <!--<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
         <link rel="stylesheet" href="src/output.css">
+        <link rel="stylesheet" href="src/custom.css">
     </head>
     <body class="w-full h-full scroll-smooth">
      <main class="w-full h-full">
-      <header class="z-30 px-2 flex flex-row justify-between items-center absolute top-7 left-0 right-0">
+      <header class="z-30 px-2 flex flex-row justify-between items-center absolute top-7 left-0 right-0 header-animate">
          <span class="text-2xl tracking-widest max-xl:text-center max-xl:absolute max-xl:left-1/2 max-xl:top-0">LO</span>
-         <span class="max-md:w-10 max-md:h-1 max-md:-top-35 max-md:max-md:bg-black invisible max-md:visible relative after:absolute after:content-[''] after:-top-5 after:-bottom-5 after:h-1 after:w-10 after:bg-black after:mt-3
-          before:absolute before:content-[''] before:top-2 before:bottom-1 before:h-1 before:w-10 before:bg-black"></span>
-          <nav class="max-md:w-100 max-md:h-60 max-md:mt-20 max-md:-ml-10 max-md:bg-white max-md:bg-shadow-xl relative">
+         <span id="hamburger" class="max-md:-top-35 max-md:w-10 max-md:h-10  invisible max-md:visible relative"></span>
+          <nav class="max-md:w-100 max-md:h-60 max-md:mt-20 max-md:-ml-10 max-md:bg-white max-md:bg-shadow-xl max-md:invisible max-md:ease-in-out max-md:duration-300 relative">
             <ul class="flex flex-row justify-between items-center max-md:flex-col max-md:items-center max-md:justify-center max-md:mt-[2em]">
                 <li class="mx-2 hover:text-zinc-800 p-1 ease-in-out rounded-xl max-md:p-3">
                     <a href="#about">
                         <h3 class="uppercase tracking-widest relative after:absolute after:-left-1 after:-top-1 after:bottom-5 hover:rounded hover:after:p-2 after:bg-green-200 after:w-0 
-                           hover:ease-inpx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watchn-out hover:duration-300 hover:text-white after:text-center after:h-7 after:ease-in-out after:duration-300  after:none hover:block hover:after:w-17 after:-z-5">About</h3>
+                           hover:ease-inpx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watchn-out hover:duration-300 hover:text-green-200 after:text-center after:h-7 after:ease-in-out after:duration-300  after:none hover:block hover:after:w-17 after:-z-5">About</h3>
                     </a>
                 </li>
                 <li class="mx-2 max-md:p-3">
                     <a href="#articles">
                         <h3 class="uppercase tracking-widest relative after:absolute after:-top-1 after:-left-1 after:bottom-5 after:h-7 hover:after:p-2 after:bg-green-200 after:w-0 
-                         ease-in-out duration-300 hover:after:w-22 after:-z-5 after:ease-in-out after:duration-300 hover:text-white text-black">Articles</h3>
+                         ease-in-out duration-300 hover:after:w-22 after:-z-5 after:ease-in-out after:duration-300 hover:text-green-200 text-black">Articles</h3>
                     </a>
                 </li>
                 <li class="mx-2 ring-2 ring-gray-600 py-1 px-2 max-md:mt-3">
                     <a href="#subscribe">
                         <h3 class="uppercase tracking-widest relative after:absolute after:-top-1 after:-left-2 after:bottom-5 after:h-[2em] hover:after:p-2 after:bg-green-200 after:w-0 
-                         ease-in-out duration-300 hover:after:w-28 hover:ring-green-400 after:-z-5 after:ease-in-out after:duration-300 hover:text-white text-red">Subscribe</h3>
+                         ease-in-out duration-300 hover:after:w-28 hover:ring-green-400 after:-z-5 after:ease-in-out after:duration-300 hover:text-green-200 text-red">Subscribe</h3>
                     </a>
                 </li>
             </ul>
@@ -143,5 +143,15 @@
         </nav>
      </footer>
     </main>
+    <script>
+      // MAKE HAMBURGER WORKING 
+      let btn = document.querySelector("#hamburger")
+      let navbar = document.querySelector("header nav")
+      //let flag = false;
+      btn.onclick = ()=>{
+        navbar.classList.toggle("max-md:visible")
+        btn.classList.toggle("open")
+      }
+    </script>
     </body>
 </html>
