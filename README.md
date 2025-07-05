@@ -16,8 +16,11 @@ Cross-Browser Compatible - Works on all modern browsers
 🚀 Quick Start
 
 Clone the repository
-bashgit clone https://github.com/vikashraosahab/tailwind_layout.git
+bash git clone https://github.com/vikashraosahab/tailwind_layout.git
+
 cd tailwind_layout
+npm install tailwindcss @tailwindcss/cli
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch 
 
 Open in your browser
 bash# Simply open index.html in your browser
