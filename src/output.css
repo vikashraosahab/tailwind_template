@@ -28,6 +28,7 @@
     --tracking-widest: 0.1em;
     --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -317,8 +318,8 @@
   .max-w-full {
     max-width: 100%;
   }
-  .animate-bounce {
-    animation: var(--animate-bounce);
+  .animate-pulse {
+    animation: var(--animate-pulse);
   }
   .flex-col {
     flex-direction: column;
@@ -769,6 +770,13 @@
       }
     }
   }
+  .hover\:animate-bounce {
+    &:hover {
+      @media (hover: hover) {
+        animation: var(--animate-bounce);
+      }
+    }
+  }
   .hover\:rounded {
     &:hover {
       @media (hover: hover) {
@@ -1212,6 +1220,11 @@
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
 }
 @keyframes bounce {
   0%, 100% {
