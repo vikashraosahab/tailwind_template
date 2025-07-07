@@ -31,8 +31,6 @@
     --animate-ping: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
     --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --animate-bounce: bounce 1s infinite;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -228,6 +226,9 @@
   .z-5 {
     z-index: 5;
   }
+  .z-10 {
+    z-index: 10;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -335,12 +336,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .animate-bounce {
-    animation: var(--animate-bounce);
-  }
-  .animate-ping {
-    animation: var(--animate-ping);
   }
   .animate-pulse {
     animation: var(--animate-pulse);
@@ -1050,6 +1045,11 @@
       left: calc(1/2 * 100%);
     }
   }
+  .max-md\:z-10 {
+    @media (width < 48rem) {
+      z-index: 10;
+    }
+  }
   .max-md\:mt-3 {
     @media (width < 48rem) {
       margin-top: calc(var(--spacing) * 3);
@@ -1068,6 +1068,11 @@
   .max-md\:-ml-10 {
     @media (width < 48rem) {
       margin-left: calc(var(--spacing) * -10);
+    }
+  }
+  .max-md\:ml-10 {
+    @media (width < 48rem) {
+      margin-left: calc(var(--spacing) * 10);
     }
   }
   .max-md\:h-10 {
@@ -1113,6 +1118,21 @@
   .max-md\:p-3 {
     @media (width < 48rem) {
       padding: calc(var(--spacing) * 3);
+    }
+  }
+  .max-md\:text-\[1\.8em\] {
+    @media (width < 48rem) {
+      font-size: 1.8em;
+    }
+  }
+  .max-md\:text-\[2\.5em\] {
+    @media (width < 48rem) {
+      font-size: 2.5em;
+    }
+  }
+  .max-md\:text-\[2em\] {
+    @media (width < 48rem) {
+      font-size: 2em;
     }
   }
   .max-md\:text-\[3em\] {
